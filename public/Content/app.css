@@ -1,0 +1,137 @@
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Ensure that the content does not get hidden behind the navbar */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+/* About Section Styling */
+.about {
+  padding: 30px;
+  background-color: #f0f0f0;
+  margin-top: 100px; /* Push content below the fixed navbar */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.about-text {
+  background-color: rgba(211, 211, 211, 0.5); /* Grey undertone background */
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.about-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Add spacing between image and video */
+}
+
+.about-media video, .about-media .about-img {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensuring image and video adjust to their containers */
+.about-media video {
+  width: 100%;
+  max-width: 300px; /* Max width for video */
+  height: auto;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 260px; /* Max width for image */
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about-media {
+    flex-direction: row; /* Ensuring side by side on medium screens */
+  }
+
+  .about-media video, .about-media .about-img {
+    width: 45%; /* Set width of video/image to 45% to allow for side-by-side */
+    margin-bottom: 20px; /* Bottom margin for better spacing */
+  }
+}
+
+@media (max-width: 768px) {
+  /* For tablets and smaller screens, stack the video and image */
+  .about-media {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-media video, .about-media .about-img {
+    width: 80%; /* Video and image will now take up 80% of the width */
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    font-size: 1.05em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile devices, tweak font sizes and image/video sizes */
+  .about h1 {
+    font-size: 2em;
+  }
+
+  .about-text {
+    font-size: 1em;
+  }
+
+  .about-media video, .about-media .about-img {
+    width: 90%; /* Full width for mobile screens */
+  }
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

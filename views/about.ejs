@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="/Content/app.css">
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Include Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <style>
+    /* Custom styles for the images and videos */
+    .about-media img,
+    .about-media video {
+      max-width: 100%; /* Make images/videos responsive */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Custom breakpoints for larger screen sizes */
+    @media (min-width: 768px) {
+      .about-media img,
+      .about-media video {
+        width: 400px; /* Increase size of images and videos on medium-sized screens */
+        height: auto;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .about-media img,
+      .about-media video {
+        width: 500px; /* Increase size of images and videos on large screens */
+        height: auto;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .about-media img,
+      .about-media video {
+        width: 600px; /* Increase size of images and videos on extra large screens */
+        height: auto;
+      }
+    }
+
+    .about-text {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .about-section-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .about-section {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Navbar at the top -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="/">
+      <i class="bi bi-house-door"></i> My Portfolio
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- About Me Link with Icon -->
+        <li class="nav-item">
+          <a class="nav-link" href="/about">
+            <i class="bi bi-info-circle"></i> About Me
+          </a>
+        </li>
+        <!-- Projects Link with Icon -->
+        <li class="nav-item">
+          <a class="nav-link" href="/projects">
+            <i class="bi bi-folder"></i> Projects
+          </a>
+        </li>
+        <!-- Contact Link with Icon -->
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">
+            <i class="bi bi-envelope"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section class="about about-section" style="margin-top: 100px;">
+    <h1 class="about-section-heading">About Me</h1>
+    <div class="about-text">
+      <p>Hello! My name is <strong>Emmanuel Paul-Chinka</strong>. I was born in Nigeria on June 6th, 2003, which makes me 21 years old.</p>
+
+      <p>I am currently pursuing a degree in <strong>Technology Management</strong> at Ontario Tech University, where I am honing my skills in tech innovation, project management, and business solutions.</p>
+
+      <p>Outside of academics, I have a strong passion for technology, entrepreneurship, and sports. I enjoy exploring new innovations and solving real-world problems with creative technical solutions. My love for technology fuels my drive to learn and grow in the field.</p>
+
+      <p>On a lighter note, I’m a big fan of good food, especially <strong>Fried Rice</strong> and <strong>Beef</strong>, which are my favorite dishes. When I'm not working on tech projects, I love to stay active by engaging in various sports. Sports help me maintain a healthy balance, keep me energized, and teach me valuable teamwork skills. My all-time favorite superhero is <strong>SPIDER-MAN</strong> because of his resilience, wit, and sense of responsibility.</p>
+    </div>
+
+    <!-- Responsive media section for video and image -->
+    <div class="row about-media">
+      <!-- Video -->
+      <div class="col-md-6 mb-3 text-center">
+        <video controls class="img-fluid" autoplay>
+          <source src="/Assets/images/video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Image -->
+      <div class="col-md-6 mb-3 text-center">
+        <img class="about-img img-fluid" src="/Assets/images/spider-man-logo-1.png" alt="Spider-Man Logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer that will always stay at the bottom -->
+  <footer>
+    <p>Connect with me on <a href="https://github.com/ryzai">GitHub</a> and <a href="https://www.linkedin.com/in/emmanuelpaulchinka">LinkedIn</a></p>
+  </footer>
+
+  <!-- JS files -->
+  <script src="/jquery/dist/jquery.min.js"></script>
+  <script src="/boo
